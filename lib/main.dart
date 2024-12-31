@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Mathematics',
+      title: 'Smart Math',
       theme: ThemeData(visualDensity: VisualDensity.adaptivePlatformDensity),
       home: const HomeScreen(),
     );
