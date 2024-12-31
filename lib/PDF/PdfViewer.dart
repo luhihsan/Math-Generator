@@ -1,6 +1,7 @@
 import 'dart:developer';
 import 'dart:io';
 import 'dart:typed_data';
+
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:pdf/pdf.dart';
@@ -9,23 +10,20 @@ import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 import 'package:universal_html/html.dart' as html;
 
 class PdfViewer extends StatefulWidget {
-
   const PdfViewer({
     required this.pdfName,
     this.path,
     this.pdfSave,
     super.key,
     this.anchor,
-    });
-
-    final String pdfName;
-    final path;
-    final pdfSave;
-    final anchor;
+  });
+  final String pdfName;
+  final path;
+  final pdfSave;
+  final anchor;
 
   @override
   _PdfViewerState createState() => _PdfViewerState();
-
 }
 
 class _PdfViewerState extends State<PdfViewer> {

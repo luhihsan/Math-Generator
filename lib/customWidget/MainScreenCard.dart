@@ -1,4 +1,5 @@
-import "package:flutter/material.dart";
+import 'package:flutter/material.dart';
+
 import '../utils/colorConst.dart';
 
 class MainScreenCard extends StatelessWidget {
@@ -18,7 +19,6 @@ class MainScreenCard extends StatelessWidget {
   final String hint;
   final int max;
   final int maxValue;
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -30,11 +30,11 @@ class MainScreenCard extends StatelessWidget {
         keyboardType: TextInputType.number,
         validator: (val) {
           if (val!.isEmpty) {
-            return 'Please enter a value';
+            return 'Please input something';
           } else if (int.parse(val) < 2) {
             return 'Value must be >3';
           } else if (int.parse(val) > maxValue) {
-            return 'System cannot handle more than 100 value';
+            return '100 Question Only';
           }
           return null;
         },
